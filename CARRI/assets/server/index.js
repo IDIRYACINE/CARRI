@@ -25,7 +25,7 @@ app.get('/Login', function (req, res) {
             res.json({response:correctPassword})
         }
         else{
-            res.json({response:correctPassword})
+            res.json({response:wrongPassword})
         }
       })
       .catch(e=>{

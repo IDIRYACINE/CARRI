@@ -23,7 +23,7 @@ buttonsObjects["page3Button"] = page3Button.innerHTML
 
 function fetchPages(){
     // request to database , get pages count
-    const pagesCount = 4
+    const pagesCount = 0
     for(let i=0;i<pagesCount;i++){
         const buttonId = `index${i}btn`
         const pageIButton = document.getElementById(buttonId)
@@ -68,7 +68,7 @@ function renderProductsCards(carsArray){
 
             const image = htmlHelper("img" , "card-img rounded-0 img-fluid")
             console.log(car.Pictures)
-            image.src = "imgs/shopimages/1_rifter.jpg"
+            image.src = car.Pictures
             card1.appendChild(image)
 
 
@@ -91,7 +91,7 @@ function renderProductsCards(carsArray){
         ul1.appendChild(li2)
         const a2 = htmlHelper("a", "btn btn-success text-white mt-2")
         a2.href= `shop-single2.html?name=${car.Car_name}?brand=${car.Brand}?distance=${car.Distance}?
-            phone_number=${car.Phone_Number}?state=${car.State}?engine=${car.Engine}?pictures=imgs/shopimages/1_rifter.jpg?`
+            phone_number=${car.Phone_Number}?state=${car.State}?engine=${car.Engine}?pictures=${car.Pictures}??`
         
         // getElementById .innerText = valeur 
         li2.appendChild(a2)

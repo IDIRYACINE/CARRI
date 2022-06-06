@@ -28,8 +28,8 @@ function connect(){
 }
 
 async function registerUser(email ,password ,username){
-        const registerUser = connection.prepare("INSERT INTO Users (email,password,user_name) VALUES(?,?,?)")
-        registerUser.run(email,password,username)
+    const registerUser = connection.prepare("INSERT INTO Users (email,password,user_name) VALUES(?,?,?)")
+    registerUser.run(email,password,username)
 }
 
 async function addCar(name,brand,distance,phoneNumber,state,engine,pictures){

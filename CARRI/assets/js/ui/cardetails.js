@@ -21,11 +21,12 @@ temp.forEach(value => {
 
 
 parseUrl()
+console.log(values)
 
 const carname = document.getElementById("carname")
 carname.innerText = values[0]
 const price = document.getElementById("carprice")
-price.innerText = "PRICE"
+price.innerText = "price" 
 const brand = document.getElementById("carbrand")
 brand.innerText = values[1]
 const engine = document.getElementById("carengine")
