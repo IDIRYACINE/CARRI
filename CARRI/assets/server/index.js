@@ -20,6 +20,7 @@ app.get('/Login', function (req, res) {
     const password = req.query.password
     console.log(email)
     console.log(password)
+    
     database.login(email,password).then((correctPassword)=>{
         if(correctPassword){
             res.json({response:correctPassword})
